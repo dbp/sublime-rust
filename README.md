@@ -1,6 +1,5 @@
 # Sublime Text package for Rust
 
-
 ## Installation
 
 TODO(via Package Control)
