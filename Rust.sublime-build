@@ -1,0 +1,4 @@
+{
+    "cmd": ["rustc", "$file"],
+    "selector": "source.rs"
+}
