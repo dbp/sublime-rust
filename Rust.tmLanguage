@@ -23,61 +23,35 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>support.class.rs</string>
+					<string>storage.type.fn.rust</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>support.constant.rs</string>
+					<string>entity.name.fn.rust</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.operator.rs</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match stuff like: Sound.prototype = { … } when extending an object</string>
-			<key>match</key>
-			<string>([a-zA-Z_?.$][\w?.$]*)\.(prototype)\s*(=)\s*</string>
-			<key>name</key>
-			<string>meta.class.rs</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.fn.rs</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.fn.rs</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rs</string>
+					<string>punctuation.definition.parameters.begin.rust</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.fn.rs</string>
+					<string>variable.parameter.fn.rust</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.end.rs</string>
+					<string>punctuation.definition.parameters.end.rust</string>
 				</dict>
 			</dict>
 			<key>comment</key>
 			<string>match regular fn like: fn myFunc(arg : type,...) { … }</string>
 			<key>match</key>
-			<string>\b(fn)\s+([a-zA-Z_$]\w*)?\s*(\()((.*?)\s?\:\s?(.*?))?(\))</string>
+			<string>\b(fn)\s+([a-zA-Z_$]\w*)?\s*(\()(([-+a-zA-Z_]+)\s?\:\s?([@~&amp;&le;&ge;\[\]A-Za-z_]+)(,)?(\n)?)*(\))</string>
 			<key>name</key>
-			<string>meta.fnargs.rs</string>
+			<string>meta.fnargs.rust</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -85,27 +59,27 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.fn.rs</string>
+					<string>storage.type.fn.rust</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.fn.rs</string>
+					<string>entity.name.fn.rust</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rs</string>
+					<string>punctuation.definition.parameters.begin.rust</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.fn.rs</string>
+					<string>variable.parameter.fn.rust</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.end.rs</string>
+					<string>punctuation.definition.parameters.end.rust</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -113,7 +87,7 @@
 			<key>match</key>
 			<string>\b(fn)\s+([a-zA-Z_$]\w*)?\s*(\()(?!\:.*?)(\))</string>
 			<key>name</key>
-			<string>meta.fn.rs</string>
+			<string>meta.fn.rust</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -121,27 +95,27 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.fn.rs</string>
+					<string>storage.type.fn.rust</string>
 				</dict>
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.fn.rs</string>
+					<string>entity.name.fn.rust</string>
 				</dict>
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rs</string>
+					<string>punctuation.definition.parameters.begin.rust</string>
 				</dict>
 				<key>4</key>
 				<dict>
 					<key>name</key>
-					<string>variable.parameter.fn.rs</string>
+					<string>variable.parameter.fn.rust</string>
 				</dict>
 				<key>5</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.end.rs</string>
+					<string>punctuation.definition.parameters.end.rust</string>
 				</dict>
 			</dict>
 			<key>comment</key>
@@ -149,38 +123,19 @@
 			<key>match</key>
 			<string>\b(mod|enum)\s+([a-zA-Z_$]\w*)?\s?\{</string>
 			<key>name</key>
-			<string>meta.extras.rs</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>keyword.operator.new.rs</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.type.instance.rs</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(new)\s+(\w+(?:\.\w*)?)</string>
-			<key>name</key>
-			<string>meta.class.instance.constructor</string>
+			<string>meta.extras.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
 			<key>name</key>
-			<string>constant.numeric.rs</string>
+			<string>constant.numeric.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\s?(\#([a-zA-Z]+))</string>
 			<key>name</key>
-			<string>constant.special.rs</string>
+			<string>constant.special.rust</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -190,7 +145,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.rs</string>
+					<string>punctuation.definition.string.begin.rust</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -200,18 +155,18 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.rs</string>
+					<string>punctuation.definition.string.end.rust</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single.rs</string>
+			<string>string.quoted.single.rust</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
 					<key>name</key>
-					<string>constant.character.escape.rs</string>
+					<string>constant.character.escape.rust</string>
 				</dict>
 			</array>
 		</dict>
@@ -223,7 +178,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.rs</string>
+					<string>punctuation.definition.string.begin.rust</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -233,18 +188,18 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.rs</string>
+					<string>punctuation.definition.string.end.rust</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.double.rs</string>
+			<string>string.quoted.double.rust</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)</string>
 					<key>name</key>
-					<string>constant.character.escape.rs</string>
+					<string>constant.character.escape.rust</string>
 				</dict>
 			</array>
 		</dict>
@@ -256,13 +211,13 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.rs</string>
+					<string>punctuation.definition.comment.rust</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.documentation.rs</string>
+			<string>comment.block.documentation.rust</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -272,13 +227,13 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.rs</string>
+					<string>punctuation.definition.comment.rust</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.rs</string>
+			<string>comment.block.rust</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -286,97 +241,85 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.rs</string>
+					<string>punctuation.definition.comment.rust</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.double-slash.rs</string>
+			<string>comment.line.double-slash.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(bool|byte|char|class|double|enum|float|f([0-9]+)|fn|int|use|uint|([0-9]+)i|([0-9]+)u|u([0-9]+)|i([0-9]+)|iface|impl|interface|long|type|short|ret|resource|str|var|mod|native|let|void)\b</string>
+			<string>\b(bool|byte|char|class|double|enum|float|f([0-9]+)|fn|int|use|uint|u([0-9]+)|i([0-9]+)|trait|impl|mod|long|mut|type|short|struct|str|mod|native|let)\b</string>
 			<key>name</key>
-			<string>storage.type.rs</string>
+			<string>storage.type.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(const|export|extends|final|implements|native|private|protected|public|static|synchronized|throws|transient|volatile)\b</string>
+			<string>\b(some|none|left|right|ok|err|success|failure|cons|nil)\b</string>
 			<key>name</key>
-			<string>storage.modifier.rs</string>
+			<string>constant.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(\||break|alt|catch|continue|default|do|else|finally|for|to|if|import|package|return|switch|throw|try|while)\b</string>
+			<string>\b(const|export|extern|pure|copy|move|extends|final|implements|native|private|protected|public|@|~)\b</string>
 			<key>name</key>
-			<string>keyword.control.rs</string>
+			<string>storage.modifier.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(delete|in|instanceof|new|typeof|with|as)\b</string>
+			<string>\b(\||break|match|again|fail|in|do|else|for|to|if|import|package|return|while)\b</string>
 			<key>name</key>
-			<string>keyword.operator.rs</string>
+			<string>keyword.control.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(drop|in|new|with|as|use)\b</string>
+			<key>name</key>
+			<string>keyword.operator.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\btrue\b</string>
 			<key>name</key>
-			<string>constant.language.boolean.true.rs</string>
+			<string>constant.language.boolean.true.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bfalse\b</string>
 			<key>name</key>
-			<string>constant.language.boolean.false.rs</string>
+			<string>constant.language.boolean.false.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\bnull\b</string>
 			<key>name</key>
-			<string>constant.language.null.rs</string>
+			<string>constant.language.null.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(self)\b</string>
 			<key>name</key>
-			<string>variable.language.rs</string>
+			<string>variable.language.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(log,assert)\b</string>
+			<string>\b(log|assert)\b</string>
 			<key>name</key>
-			<string>keyword.other.rs</string>
+			<string>keyword.other.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(std|str|io|float|consts|crypto|vec|unsafe|ptr)\b</string>
 			<key>name</key>
-			<string>support.class.rs</string>
+			<string>support.class.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(s(h(ift|ow(Mod(elessDialog|alDialog)|Help))|croll(X|By(Pages|Lines)?|Y|To)?|t(op|rike)|i(n|zeToContent|debar|gnText)|ort|u(p|b(str(ing)?)?)|pli(ce|t)|e(nd|t(Re(sizable|questHeader)|M(i(nutes|lliseconds)|onth)|Seconds|Ho(tKeys|urs)|Year|Cursor|Time(out)?|Interval|ZOptions|Date|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Date|FullYear)|FullYear|Active)|arch)|qrt|lice|avePreferences|mall)|h(ome|andleEvent)|navigate|c(har(CodeAt|At)|o(s|n(cat|textual|firm)|mpile)|eil|lear(Timeout|Interval)?|a(ptureEvents|ll)|reate(StyleSheet|Popup|EventObject))|t(o(GMTString|S(tring|ource)|U(TCString|pperCase)|Lo(caleString|werCase))|est|a(n|int(Enabled)?))|i(s(NaN|Finite)|ndexOf|talics)|d(isableExternalCapture|ump|etachEvent)|u(n(shift|taint|escape|watch)|pdateCommands)|j(oin|avaEnabled)|p(o(p|w)|ush|lugins.refresh|a(ddings|rse(Int|Float)?)|r(int|ompt|eference))|e(scape|nableExternalCapture|val|lementFromPoint|x(p|ec(Script|Command)?))|valueOf|UTC|queryCommand(State|Indeterm|Enabled|Value)|f(i(nd|le(ModifiedDate|Size|CreatedDate|UpdatedDate)|xed)|o(nt(size|color)|rward)|loor|romCharCode)|watch|l(ink|o(ad|g)|astIndexOf)|a(sin|nchor|cos|t(tachEvent|ob|an(2)?)|pply|lert|b(s|ort))|r(ou(nd|teEvents)|e(size(By|To)|calc|turnValue|place|verse|l(oad|ease(Capture|Events)))|andom)|g(o|et(ResponseHeader|M(i(nutes|lliseconds)|onth)|Se(conds|lection)|Hours|Year|Time(zoneOffset)?|Da(y|te)|UTC(M(i(nutes|lliseconds)|onth)|Seconds|Hours|Da(y|te)|FullYear)|FullYear|A(ttention|llResponseHeaders)))|m(in|ove(B(y|elow)|To(Absolute)?|Above)|ergeAttributes|a(tch|rgins|x))|b(toa|ig|o(ld|rderWidths)|link|ack))\b(?=\()</string>
+			<string>!|\$|%|&amp;|\*|\-\-|\-|\+\+|\+|--&gt;|==|=|!=|!=|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|::|\b(in)\b</string>
 			<key>name</key>
-			<string>support.fn.rs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(?&lt;=\.)(s(ystemLanguage|cr(ipts|ollbars|een(X|Y|Top|Left))|t(yle(Sheets)?|atus(Text|bar)?)|ibling(Below|Above)|ource|uffixes|e(curity(Policy)?|l(ection|f)))|h(istory|ost(name)?|as(h|Focus))|y|X(MLDocument|SLDocument)|n(ext|ame(space(s|URI)|Prop))|M(IN_VALUE|AX_VALUE)|c(haracterSet|o(n(structor|trollers)|okieEnabled|lorDepth|mp(onents|lete))|urrent|puClass|l(i(p(boardData)?|entInformation)|osed|asses)|alle(e|r)|rypto)|t(o(olbar|p)|ext(Transform|Indent|Decoration|Align)|ags)|SQRT(1_2|2)|i(n(ner(Height|Width)|put)|ds|gnoreCase)|zIndex|o(scpu|n(readystatechange|Line)|uter(Height|Width)|p(sProfile|ener)|ffscreenBuffering)|NEGATIVE_INFINITY|d(i(splay|alog(Height|Top|Width|Left|Arguments)|rectories)|e(scription|fault(Status|Ch(ecked|arset)|View)))|u(ser(Profile|Language|Agent)|n(iqueID|defined)|pdateInterval)|_content|p(ixelDepth|ort|ersonalbar|kcs11|l(ugins|atform)|a(thname|dding(Right|Bottom|Top|Left)|rent(Window|Layer)?|ge(X(Offset)?|Y(Offset)?))|r(o(to(col|type)|duct(Sub)?|mpter)|e(vious|fix)))|e(n(coding|abledPlugin)|x(ternal|pando)|mbeds)|v(isibility|endor(Sub)?|Linkcolor)|URLUnencoded|P(I|OSITIVE_INFINITY)|f(ilename|o(nt(Size|Family|Weight)|rmName)|rame(s|Element)|gColor)|E|whiteSpace|l(i(stStyleType|n(eHeight|kColor))|o(ca(tion(bar)?|lName)|wsrc)|e(ngth|ft(Context)?)|a(st(M(odified|atch)|Index|Paren)|yer(s|X)|nguage))|a(pp(MinorVersion|Name|Co(deName|re)|Version)|vail(Height|Top|Width|Left)|ll|r(ity|guments)|Linkcolor|bove)|r(ight(Context)?|e(sponse(XML|Text)|adyState))|global|x|m(imeTypes|ultiline|enubar|argin(Right|Bottom|Top|Left))|L(N(10|2)|OG(10E|2E))|b(o(ttom|rder(Width|RightWidth|BottomWidth|Style|Color|TopWidth|LeftWidth))|ufferDepth|elow|ackground(Color|Image)))\b</string>
-			<key>name</key>
-			<string>support.constant.rs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>!|\$|%|&amp;|\*|\-\-|\-|\+\+|\+|~|--&gt;|===|==|=|!=|!==|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|\b(in|instanceof|new|delete|typeof|void)\b</string>
-			<key>name</key>
-			<string>keyword.operator.rs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(Infinity|NaN|undefined)\b</string>
-			<key>name</key>
-			<string>constant.language.rs</string>
+			<string>keyword.operator.rust</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -386,7 +329,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.rs</string>
+					<string>punctuation.definition.string.begin.rust</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -396,18 +339,18 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.rs</string>
+					<string>punctuation.definition.string.end.rust</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.regexp.rs</string>
+			<string>string.regexp.rust</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.rs</string>
+					<string>constant.character.escape.rust</string>
 				</dict>
 			</array>
 		</dict>
@@ -415,65 +358,59 @@
 			<key>match</key>
 			<string>\;</string>
 			<key>name</key>
-			<string>punctuation.terminator.statement.rs</string>
+			<string>punctuation.terminator.statement.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>,[ |\t]*</string>
 			<key>name</key>
-			<string>meta.delimiter.object.comma.rs</string>
+			<string>meta.delimiter.object.comma.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\.</string>
 			<key>name</key>
-			<string>meta.delimiter.method.period.rs</string>
+			<string>meta.delimiter.method.period.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\{|\}</string>
 			<key>name</key>
-			<string>meta.brace.curly.rs</string>
+			<string>meta.brace.curly.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\(|\)</string>
 			<key>name</key>
-			<string>meta.brace.round.rs</string>
+			<string>meta.brace.round.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\[|\]</string>
 			<key>name</key>
-			<string>meta.brace.square.rs</string>
+			<string>meta.brace.square.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(#)[a-zA-Z][a-zA-Z0-9_-]*</string>
 			<key>name</key>
-			<string>meta.fn.rs</string>
+			<string>meta.fn.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(use)\s+(\w+)</string>
 			<key>name</key>
-			<string>meta.use.rs</string>
+			<string>meta.use.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(import)\s+(\w+)((::)?(\w+)?)</string>
 			<key>name</key>
-			<string>meta.import.rs</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(println)\b</string>
-			<key>name</key>
-			<string>entity.mod.fn.rs</string>
+			<string>meta.import.rust</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.rs</string>
+	<string>source.rust</string>
 	<key>uuid</key>
 	<string>E54FA931-0668-4496-8922-F91520AD02B3</string>
 </dict>
