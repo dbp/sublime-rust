@@ -18,6 +18,22 @@ Open the palette (`control+shift+P` or `command+shift+P`) in Sublime Text
 and select `Package Control: Install Package` and then select `Rust` from 
 the list. That's it.
 
+## Development
+
+The files are written in the JSON format supported by the Sublime Text 
+package AAAPackageDev, because the format is much easier to read / edit
+than the xml based plist format.
+
+So install that package and then work on the .JSON-* files. There is a 
+build system that comes with that package, so if everything is set up
+right, you should just be able to trigger the build (F7) and get the
+corresponding .tmLanguage / .tmPreferences files. It will also display
+errors if you have not formatted the file correctly.
+
+One impact of using this indirect format is that you usually have to double 
+escape anything in the match patterns, ie, "\(" has to be "\\(" as otherwise
+it will try to interpret '\(' as a JSON escape code (which doesn't exist).
+
 ## Credits
 
 Created 2012 by Daniel Patterson <dbp@riseup.net>.
