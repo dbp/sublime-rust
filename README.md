@@ -40,8 +40,8 @@ Created 2012 by Daniel Patterson <dbp@riseup.net>, as a near complete from
 scratch rewrite of a package by [Felix Martini](https://github.com/fmartini).
 
 Derived primarily from the Vim syntax file, maintained by
-Patrick Walton <pcwalton@mozilla.com>
-Ben Blum <bblum@mozilla.com>
+[Patrick Walton](https://github.com/pcwalton) and
+[Ben Blum](https://github.com/bblum)
 
 With a little help from the (now very outdated) TextMate rust mode written 
 by [Tom Ellis](https://github.com/tomgrohl).
