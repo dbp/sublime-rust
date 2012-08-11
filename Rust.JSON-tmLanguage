@@ -1,0 +1,71 @@
+{ "name": "Rust",
+  "scopeName": "source.rust",
+  "fileTypes": ["rs", "rc"],
+  "foldingStartMarker": "^.*\\bfn\\s*(\\w+\\s*)?\\([^\\)]*\\)(\\s*\\{[^\\}]*)?\\s*$",
+  "foldingStopMarker": "^\\s*\\}",
+  "patterns": [
+    {"name": "string.quoted.single.source.rust",
+     "begin": "'",
+     "end": "'",
+     "patterns": [
+      {"include": "#rust_escaped_character"}
+      ]
+    },
+    {"name": "string.quoted.double.source.rust",
+     "begin": "\"",
+     "end": "\"",
+     "patterns": [
+      {"include": "#rust_escaped_character"}
+     ]
+    },
+    {"name": "keyword.source.rust",
+     "match": "\\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|return|to|unchecked|use|while|with|mod|trait|class|struct|enum|type|fn)\\b"
+    },
+    {"name": "storage.type.source.rust",
+     "match": "\\b(m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\\b"
+    },
+    {"name": "variable.language.source.rust",
+     "match": "\\bself\\b"
+    },
+    {"name": "constant.language.source.rust",
+     "match": "\\b(true|false|some|none|left|right|ok|err|success|failure|cons|nil|empty|node)\\b"
+    },
+    {"name": "support.constant.source.rust",
+     "match": "\\b(EXIT_FAILURE|EXIT_SUCCESS|RAND_MAX|EOF|SEEK_SET|SEEK_CUR|SEEK_END|_IOFBF|_IONBF|_IOLBF|BUFSIZ|FOPEN_MAX|FILENAME_MAX|L_tmpnam|TMP_MAX|O_RDONLY|O_WRONLY|O_RDWR|O_APPEND|O_CREAT|O_EXCL|O_TRUNC|S_IFIFO|S_IFCHR|S_IFBLK|S_IFDIR|S_IFREG|S_IFMT|S_IEXEC|S_IWRITE|S_IREAD|S_IRWXU|S_IXUSR|S_IWUSR|S_IRUSR|F_OK|R_OK|W_OK|X_OK|STDIN_FILENO|STDOUT_FILENO|STDERR_FILENO)\\b"
+    },
+    {"name": "meta.preprocessor.source.rust",
+     "match": "\\b(\\w\\(\\w\\)*!)|(#\\[[\\w=\\(\\)_]+\\])\\b"
+    },
+    {"name": "constant.numeric.integer.source.rust",
+     "match": "\\b(([0-9][0-9_]*)|([0-9][0-9_]*(u|u8|u16|u32|u64))|([0-9][0-9_]*(i8|i16|i32|i64)))\\b"
+    },
+    {"name": "constant.numeric.hex.source.rust",
+     "match": "\\b((0x[a-fA-F0-9_]+)|(0x[a-fA-F0-9_]+(u|u8|u16|u32|u64))|(0x[a-fA-F0-9_]+(i8|i16|i32|i64)))\\b"
+    },
+    {"name": "constant.numeric.binary.source.rust",
+     "match": "\\b((0b[01_]+)|(0b[01_]+(u|u8|u16|u32|u64))|(0b[01_]+(i8|i16|i32|i64)))\\b"
+    },
+    {"name": "constant.numeric.float.source.rust",
+     "match": "([0-9][0-9_]*(f|f32|f64))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f|f32|f64))|([0-9][0-9_]*\\.[0-9_]+)|([0-9][0-9_]*\\.[0-9_]+(f|f32|f64))|([0-9][0-9_]*\\.[0-9_]+%([eE][\\+-]=[0-9_]+))|([0-9][0-9_]*\\.[0-9_]+%([eE][+-]=[0-9_]+)(f|f32|f64))"
+    },
+    {"name": "comment.line.documentation.source.rust",
+     "begin": "//!",
+     "end": "$\\n"
+    },
+    {"name": "comment.line.double-dash.source.rust",
+     "begin": "//",
+     "end": "$\\n"
+    },
+    {"name": "comment.block.source.rust",
+     "begin": "/\\*",
+     "end": "\\*/"
+    }
+  ],
+  "repository": {
+    "rust_escaped_character": {
+      "name": "constant.character.escape.source.rust",
+      "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)"
+    }
+  },
+  "uuid": "4339386b-4d67-4f0e-9e78-09ecbcddf71d"
+}

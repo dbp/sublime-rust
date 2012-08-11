@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>comment</key>
-	<string>Rust Syntax: version 0.1</string>
+	<key>_comment</key>
+	<array>
+		<string>Created 2012 by Daniel Patterson &lt;dbp@riseup.net&gt;.</string>
+		<string>Mit License.</string>
+		<string>Last Updated: 2012.7.11.</string>
+		<string>Derived from the Vim syntax file, maintained by</string>
+		<string>Patrick Walton &lt;pcwalton@mozilla.com&gt;</string>
+		<string>Ben Blum &lt;bblum@mozilla.com&gt;.</string>
+		<string>With a little help from the TextMate rust mode by Webmuse | Tom Ellis.</string>
+		<string>This syntax file supports current rust at the time of writing;</string>
+		<string>it makes no attempt at backwards compatibility.</string>
+		<string>This is intended to be a feature - if keywords no longer highlight,</string>
+		<string>it means that the keyword has changed or will soon.</string>
+	</array>
 	<key>fileTypes</key>
 	<array>
 		<string>rs</string>
-		<string>jc</string>
+		<string>rc</string>
 	</array>
 	<key>foldingStartMarker</key>
 	<string>^.*\bfn\s*(\w+\s*)?\([^\)]*\)(\s*\{[^\}]*)?\s*$</string>
@@ -18,400 +30,133 @@
 	<key>patterns</key>
 	<array>
 		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.fn.rust</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.fn.rust</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rust</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.fn.rust</string>
-				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.end.rust</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match regular fn like: fn myFunc(arg : type,...) { … }</string>
-			<key>match</key>
-			<string>\b(fn)\s+([a-zA-Z_$]\w*)?\s*(\()(([-+a-zA-Z_]+)\s?\:\s?([@~&amp;&le;&ge;\[\]A-Za-z_]+)(,)?(\n)?)*(\))</string>
-			<key>name</key>
-			<string>meta.fnargs.rust</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.fn.rust</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.fn.rust</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rust</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.fn.rust</string>
-				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.end.rust</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match regular fn like: fn myFunc(arg) { … }</string>
-			<key>match</key>
-			<string>\b(fn)\s+([a-zA-Z_$]\w*)?\s*(\()(?!\:.*?)(\))</string>
-			<key>name</key>
-			<string>meta.fn.rust</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>storage.type.fn.rust</string>
-				</dict>
-				<key>2</key>
-				<dict>
-					<key>name</key>
-					<string>entity.name.fn.rust</string>
-				</dict>
-				<key>3</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.begin.rust</string>
-				</dict>
-				<key>4</key>
-				<dict>
-					<key>name</key>
-					<string>variable.parameter.fn.rust</string>
-				</dict>
-				<key>5</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.parameters.end.rust</string>
-				</dict>
-			</dict>
-			<key>comment</key>
-			<string>match regular fn like: fn myFunc(arg) { … }</string>
-			<key>match</key>
-			<string>\b(mod|enum)\s+([a-zA-Z_$]\w*)?\s?\{</string>
-			<key>name</key>
-			<string>meta.extras.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\.[0-9]+)?))\b</string>
-			<key>name</key>
-			<string>constant.numeric.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\s?(\#([a-zA-Z]+))</string>
-			<key>name</key>
-			<string>constant.special.rust</string>
-		</dict>
-		<dict>
 			<key>begin</key>
 			<string>'</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.rust</string>
-				</dict>
-			</dict>
 			<key>end</key>
 			<string>'</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.rust</string>
-				</dict>
-			</dict>
 			<key>name</key>
-			<string>string.quoted.single.rust</string>
+			<string>string.quoted.single.source.rust</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
-					<key>name</key>
-					<string>constant.character.escape.rust</string>
+					<key>include</key>
+					<string>#rust_escaped_character</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>begin</key>
 			<string>"</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.rust</string>
-				</dict>
-			</dict>
 			<key>end</key>
 			<string>"</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.rust</string>
-				</dict>
-			</dict>
 			<key>name</key>
-			<string>string.quoted.double.rust</string>
+			<string>string.quoted.double.source.rust</string>
 			<key>patterns</key>
 			<array>
 				<dict>
-					<key>match</key>
-					<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)</string>
-					<key>name</key>
-					<string>constant.character.escape.rust</string>
+					<key>include</key>
+					<string>#rust_escaped_character</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
-			<key>begin</key>
-			<string>/\*\*(?!/)</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.rust</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>\*/</string>
+			<key>match</key>
+			<string>\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|return|to|unchecked|use|while|with|mod|trait|class|struct|enum|type|fn)\b</string>
 			<key>name</key>
-			<string>comment.block.documentation.rust</string>
+			<string>keyword.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\b</string>
+			<key>name</key>
+			<string>storage.type.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\bself\b</string>
+			<key>name</key>
+			<string>variable.language.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(true|false|some|none|left|right|ok|err|success|failure|cons|nil|empty|node)\b</string>
+			<key>name</key>
+			<string>constant.language.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(EXIT_FAILURE|EXIT_SUCCESS|RAND_MAX|EOF|SEEK_SET|SEEK_CUR|SEEK_END|_IOFBF|_IONBF|_IOLBF|BUFSIZ|FOPEN_MAX|FILENAME_MAX|L_tmpnam|TMP_MAX|O_RDONLY|O_WRONLY|O_RDWR|O_APPEND|O_CREAT|O_EXCL|O_TRUNC|S_IFIFO|S_IFCHR|S_IFBLK|S_IFDIR|S_IFREG|S_IFMT|S_IEXEC|S_IWRITE|S_IREAD|S_IRWXU|S_IXUSR|S_IWUSR|S_IRUSR|F_OK|R_OK|W_OK|X_OK|STDIN_FILENO|STDOUT_FILENO|STDERR_FILENO)\b</string>
+			<key>name</key>
+			<string>support.constant.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(\w\(\w\)*!)|(#\[[\w=\(\)_]+\])\b</string>
+			<key>name</key>
+			<string>meta.preprocessor.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(([0-9][0-9_]*)|([0-9][0-9_]*(u|u8|u16|u32|u64))|([0-9][0-9_]*(i8|i16|i32|i64)))\b</string>
+			<key>name</key>
+			<string>constant.numeric.integer.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b((0x[a-fA-F0-9_]+)|(0x[a-fA-F0-9_]+(u|u8|u16|u32|u64))|(0x[a-fA-F0-9_]+(i8|i16|i32|i64)))\b</string>
+			<key>name</key>
+			<string>constant.numeric.hex.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b((0b[01_]+)|(0b[01_]+(u|u8|u16|u32|u64))|(0b[01_]+(i8|i16|i32|i64)))\b</string>
+			<key>name</key>
+			<string>constant.numeric.binary.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>([0-9][0-9_]*(f|f32|f64))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+)|([0-9][0-9_]*\.[0-9_]+(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+%([eE][\+-]=[0-9_]+))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+)(f|f32|f64))</string>
+			<key>name</key>
+			<string>constant.numeric.float.source.rust</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>//!</string>
+			<key>end</key>
+			<string>$\n</string>
+			<key>name</key>
+			<string>comment.line.documentation.source.rust</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>//</string>
+			<key>end</key>
+			<string>$\n</string>
+			<key>name</key>
+			<string>comment.line.double-dash.source.rust</string>
 		</dict>
 		<dict>
 			<key>begin</key>
 			<string>/\*</string>
-			<key>captures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.rust</string>
-				</dict>
-			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.rust</string>
-		</dict>
-		<dict>
-			<key>captures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.comment.rust</string>
-				</dict>
-			</dict>
-			<key>match</key>
-			<string>(//).*$\n?</string>
-			<key>name</key>
-			<string>comment.line.double-slash.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(bool|byte|char|class|double|enum|float|f([0-9]+)|fn|int|use|uint|u([0-9]+)|i([0-9]+)|trait|impl|mod|long|mut|type|short|struct|str|mod|native|let)\b</string>
-			<key>name</key>
-			<string>storage.type.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(some|none|left|right|ok|err|success|failure|cons|nil)\b</string>
-			<key>name</key>
-			<string>constant.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(const|export|extern|pure|copy|move|extends|final|implements|native|private|protected|public|@|~)\b</string>
-			<key>name</key>
-			<string>storage.modifier.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(\||break|match|again|fail|in|do|else|for|to|if|import|package|return|while)\b</string>
-			<key>name</key>
-			<string>keyword.control.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(drop|in|new|with|as|use)\b</string>
-			<key>name</key>
-			<string>keyword.operator.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\btrue\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.true.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\bfalse\b</string>
-			<key>name</key>
-			<string>constant.language.boolean.false.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\bnull\b</string>
-			<key>name</key>
-			<string>constant.language.null.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(self)\b</string>
-			<key>name</key>
-			<string>variable.language.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(log|assert)\b</string>
-			<key>name</key>
-			<string>keyword.other.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\b(std|str|io|float|consts|crypto|vec|unsafe|ptr)\b</string>
-			<key>name</key>
-			<string>support.class.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>!|\$|%|&amp;|\*|\-\-|\-|\+\+|\+|--&gt;|==|=|!=|!=|&lt;=|&gt;=|&lt;&lt;=|&gt;&gt;=|&gt;&gt;&gt;=|&lt;&gt;|&lt;|&gt;|!|&amp;&amp;|\|\||\?\:|\*=|(?&lt;!\()/=|%=|\+=|\-=|&amp;=|\^=|::|\b(in)\b</string>
-			<key>name</key>
-			<string>keyword.operator.rust</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>(?&lt;=[=(:]|^|ret)\s*(/)(?![/*+{}?])</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.rust</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>(/)[igm]*</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>1</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.rust</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.regexp.rust</string>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>\\.</string>
-					<key>name</key>
-					<string>constant.character.escape.rust</string>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\;</string>
-			<key>name</key>
-			<string>punctuation.terminator.statement.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>,[ |\t]*</string>
-			<key>name</key>
-			<string>meta.delimiter.object.comma.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\.</string>
-			<key>name</key>
-			<string>meta.delimiter.method.period.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\{|\}</string>
-			<key>name</key>
-			<string>meta.brace.curly.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\(|\)</string>
-			<key>name</key>
-			<string>meta.brace.round.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>\[|\]</string>
-			<key>name</key>
-			<string>meta.brace.square.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(#)[a-zA-Z][a-zA-Z0-9_-]*</string>
-			<key>name</key>
-			<string>meta.fn.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(use)\s+(\w+)</string>
-			<key>name</key>
-			<string>meta.use.rust</string>
-		</dict>
-		<dict>
-			<key>match</key>
-			<string>(import)\s+(\w+)((::)?(\w+)?)</string>
-			<key>name</key>
-			<string>meta.import.rust</string>
+			<string>comment.block.source.rust</string>
 		</dict>
 	</array>
+	<key>repository</key>
+	<dict>
+		<key>rust_escaped_character</key>
+		<dict>
+			<key>match</key>
+			<string>\\(x\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)</string>
+			<key>name</key>
+			<string>constant.character.escape.source.rust</string>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.rust</string>
 	<key>uuid</key>
-	<string>E54FA931-0668-4496-8922-F91520AD02B3</string>
+	<string>4339386b-4d67-4f0e-9e78-09ecbcddf71d</string>
 </dict>
 </plist>

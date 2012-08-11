@@ -1,0 +1,8 @@
+{
+    "name": "Rust Indent",
+    "scope": "source.rust",
+    "settings": {
+        "increaseIndentPattern": "^.*\\{[^}\"']*$",
+        "decreaseIndentPattern": "^(.*\\*/)?\\s*\\}.*$"
+    }
+}
