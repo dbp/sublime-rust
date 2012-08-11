@@ -2,20 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>_comment</key>
-	<array>
-		<string>Created 2012 by Daniel Patterson &lt;dbp@riseup.net&gt;.</string>
-		<string>Mit License.</string>
-		<string>Last Updated: 2012.7.11.</string>
-		<string>Derived from the Vim syntax file, maintained by</string>
-		<string>Patrick Walton &lt;pcwalton@mozilla.com&gt;</string>
-		<string>Ben Blum &lt;bblum@mozilla.com&gt;.</string>
-		<string>With a little help from the TextMate rust mode by Webmuse | Tom Ellis.</string>
-		<string>This syntax file supports current rust at the time of writing;</string>
-		<string>it makes no attempt at backwards compatibility.</string>
-		<string>This is intended to be a feature - if keywords no longer highlight,</string>
-		<string>it means that the keyword has changed or will soon.</string>
-	</array>
 	<key>fileTypes</key>
 	<array>
 		<string>rs</string>
@@ -60,8 +46,50 @@
 			</array>
 		</dict>
 		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.rust</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.source.rust</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>functions with types</string>
 			<key>match</key>
-			<string>\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|return|to|unchecked|use|while|with|mod|trait|class|struct|enum|type|fn)\b</string>
+			<string>\b(fn)\s+([a-zA-Z_]\w*)\s*(\()</string>
+			<key>name</key>
+			<string>meta.function.source.rust</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.source.rust</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.source.rust</string>
+				</dict>
+			</dict>
+			<key>comment</key>
+			<string>functions without types</string>
+			<key>match</key>
+			<string>\b(fn)\s+([a-zA-Z_]\w*)\s*(\()</string>
+			<key>name</key>
+			<string>meta.function.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|return|to|unchecked|use|while|with|mod|trait|class|struct|enum|type)\b</string>
 			<key>name</key>
 			<string>keyword.source.rust</string>
 		</dict>
@@ -115,7 +143,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>([0-9][0-9_]*(f|f32|f64))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+)|([0-9][0-9_]*\.[0-9_]+(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+%([eE][\+-]=[0-9_]+))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+)(f|f32|f64))</string>
+			<string>([0-9][0-9_]*(f|f32|f64))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+)|([0-9][0-9_]*\.[0-9_]+(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+)(f|f32|f64))</string>
 			<key>name</key>
 			<string>constant.numeric.float.source.rust</string>
 		</dict>
