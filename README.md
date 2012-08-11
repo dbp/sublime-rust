@@ -38,8 +38,6 @@ it will try to interpret '\(' as a JSON escape code (which doesn't exist).
 
 Created 2012 by Daniel Patterson <dbp@riseup.net>.
 
-Last Updated: 2012.7.11
-
 Derived primarily from the Vim syntax file, maintained by
 Patrick Walton <pcwalton@mozilla.com>
 Ben Blum <bblum@mozilla.com>
