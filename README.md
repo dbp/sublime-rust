@@ -36,7 +36,7 @@ it will try to interpret '\(' as a JSON escape code (which doesn't exist).
 
 ## Credits
 
-Created 2012 by Daniel Patterson <dbp@riseup.net>, as a near complete from 
+Created 2012 by [Daniel Patterson](dbp@riseup.net), as a near complete from 
 scratch rewrite of a package by [Felix Martini](https://github.com/fmartini).
 
 Derived primarily from the Vim syntax file, maintained by
