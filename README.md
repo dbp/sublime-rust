@@ -31,8 +31,8 @@ corresponding .tmLanguage / .tmPreferences files. It will also display
 errors if you have not formatted the file correctly.
 
 One impact of using this indirect format is that you usually have to double 
-escape anything in the match patterns, ie, "\(" has to be "\\(" as otherwise
-it will try to interpret '\(' as a JSON escape code (which doesn't exist).
+escape anything in the match patterns, ie, "\\(" has to be "\\\\(" as otherwise
+it will try to interpret '\\(' as a JSON escape code (which doesn't exist).
 
 ## Credits
 
