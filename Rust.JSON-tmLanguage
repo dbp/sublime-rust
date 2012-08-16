@@ -35,7 +35,7 @@
      "comment": "functions without types"
     },
     {"name": "keyword.source.rust",
-     "match": "\\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|return|to|unchecked|use|while|with|mod|trait|class|struct|enum|type)\\b"
+     "match": "\\b(again|as|break|check|claim|const|copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|owned|priv|pub|pure|ref|return|to|unchecked|use|while|with|mod|static|trait|class|struct|enum|type)\\b"
     },
     {"name": "storage.type.source.rust",
      "match": "\\b(m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\\b"
