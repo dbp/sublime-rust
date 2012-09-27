@@ -26,7 +26,7 @@
         }
     },
     {"name": "keyword.source.rust",
-     "match": "\\b(as|break|check|claim|const|Copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|Owned|priv|pub|pure|ref|return|to|unchecked|unsafe|use|while|with|mod|static|trait|class|struct|enum|type)\\b"
+     "match": "\\b(as|break|check|claim|const|Copy|do|drop|else|export|extern|fail|for|if|impl|import|in|let|log|loop|match|mod|module|move|mut|new|of|Owned|priv|pub|pure|ref|return|to|unchecked|unsafe|use|while|with|mod|Send|static|trait|class|struct|enum|type)\\b"
     },
     {"name": "storage.type.source.rust",
      "match": "\\b(m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\\b"
@@ -35,7 +35,7 @@
      "match": "\\bself\\b"
     },
     {"name": "constant.language.source.rust",
-     "match": "\\b(true|false|some|none|left|right|ok|err|success|failure|cons|nil|empty|node)\\b"
+     "match": "\\b(true|false|Some|None|Left|Right|Ok|Err)\\b"
     },
     {"name": "support.constant.source.rust",
      "match": "\\b(EXIT_FAILURE|EXIT_SUCCESS|RAND_MAX|EOF|SEEK_SET|SEEK_CUR|SEEK_END|_IOFBF|_IONBF|_IOLBF|BUFSIZ|FOPEN_MAX|FILENAME_MAX|L_tmpnam|TMP_MAX|O_RDONLY|O_WRONLY|O_RDWR|O_APPEND|O_CREAT|O_EXCL|O_TRUNC|S_IFIFO|S_IFCHR|S_IFBLK|S_IFDIR|S_IFREG|S_IFMT|S_IEXEC|S_IWRITE|S_IREAD|S_IRWXU|S_IXUSR|S_IWUSR|S_IRUSR|F_OK|R_OK|W_OK|X_OK|STDIN_FILENO|STDOUT_FILENO|STDERR_FILENO)\\b"
