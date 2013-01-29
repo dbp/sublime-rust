@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\b</string>
+			<string>\b(Self|m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|option|either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\b</string>
 			<key>name</key>
 			<string>storage.type.source.rust</string>
 		</dict>
@@ -102,25 +102,25 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(([0-9][0-9_]*)|([0-9][0-9_]*(u|u8|u16|u32|u64))|([0-9][0-9_]*(i8|i16|i32|i64)))\b</string>
+			<string>\b(([0-9][0-9_]*)|([0-9][0-9_]*(u|u8|u16|u32|u64))|([0-9][0-9_]*(i|i8|i16|i32|i64)))\b</string>
 			<key>name</key>
 			<string>constant.numeric.integer.source.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b((0x[a-fA-F0-9_]+)|(0x[a-fA-F0-9_]+(u|u8|u16|u32|u64))|(0x[a-fA-F0-9_]+(i8|i16|i32|i64)))\b</string>
+			<string>\b((0x[a-fA-F0-9_]+)|(0x[a-fA-F0-9_]+(u|u8|u16|u32|u64))|(0x[a-fA-F0-9_]+(i|i8|i16|i32|i64)))\b</string>
 			<key>name</key>
 			<string>constant.numeric.hex.source.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b((0b[01_]+)|(0b[01_]+(u|u8|u16|u32|u64))|(0b[01_]+(i8|i16|i32|i64)))\b</string>
+			<string>\b((0b[01_]+)|(0b[01_]+(u|u8|u16|u32|u64))|(0b[01_]+(i|i8|i16|i32|i64)))\b</string>
 			<key>name</key>
 			<string>constant.numeric.binary.source.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>([0-9][0-9_]*(f|f32|f64))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+)|([0-9][0-9_]*\.[0-9_]+(f|f32|f64))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+)(f|f32|f64))</string>
+			<string>([0-9][0-9_]*(f32|f64|f))|([0-9][0-9_]*([eE][+-]=[0-9_]+))|([0-9][0-9_]*([eE][+-]=[0-9_]+)(f32|f64|f))|([0-9][0-9_]*\.[0-9_]+)|([0-9][0-9_]*\.[0-9_]+(f32|f64|f))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+))|([0-9][0-9_]*\.[0-9_]+%([eE][+-]=[0-9_]+)(f32|f64|f))</string>
 			<key>name</key>
 			<string>constant.numeric.float.source.rust</string>
 		</dict>
