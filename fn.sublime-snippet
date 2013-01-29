@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[fn ${1:name}(${2}) ${3}{
+	${4}
+}]]></content>
+	<tabTrigger>fn</tabTrigger>
+	<scope>source.rust</scope>
+	<description>fn …() { … }</description>
+</snippet>
