@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[enum ${1:Name} {
+    ${2}
+}]]></content>
+    <tabTrigger>enum</tabTrigger>
+    <scope>source.rust</scope>
+    <description>enum … { … }</description>
+</snippet>
