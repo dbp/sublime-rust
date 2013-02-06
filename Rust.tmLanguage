@@ -60,7 +60,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(fn)\s+([a-zA-Z_&lt;&gt;][\w\:, &lt;&gt;]*)\s*(\()</string>
+			<string>\b(fn)\s+([a-zA-Z_&lt;&gt;][\w\:,+ &lt;&gt;]*)\s*(\()</string>
 			<key>name</key>
 			<string>meta.function.source.rust</string>
 		</dict>
