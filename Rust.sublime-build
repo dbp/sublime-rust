@@ -5,5 +5,17 @@
     "osx":
 	{
 		"path": "/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin"
-	}
+	},
+	
+	"variants": [
+        { 	
+			"selector": "source.rust",
+			"cmd": [".$file_base_name"],
+          	"name": "Run",
+			"windows":
+		    {
+		        "cmd": ["$file_base_name.exe"]
+		    }
+        }
+	]
 }
