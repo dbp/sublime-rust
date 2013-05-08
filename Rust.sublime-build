@@ -10,7 +10,7 @@
     "variants": [
         { 	
             "selector": "source.rust",
-            "cmd": [".$file_base_name"],
+            "cmd": ["./$file_base_name"],
             "name": "Run",
             "windows":
             {
