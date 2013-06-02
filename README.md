@@ -21,7 +21,8 @@ the list. That's it.
 ## Development
 
 The files are written in the JSON format supported by the Sublime Text 
-package AAAPackageDev, because the format is much easier to read / edit
+package [AAAPackageDev](https://github.com/SublimeText/AAAPackageDev), 
+because the format is much easier to read / edit
 than the xml based plist format.
 
 So install that package and then work on the .JSON-* files. There is a 
