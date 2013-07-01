@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+assert!(${1} == ${2});
+]]></content>
+	<tabTrigger>ast</tabTrigger>
+	<scope>source.rust</scope>
+</snippet>

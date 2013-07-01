@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+fail!(~"${1}");
+]]></content>
+	<tabTrigger>fail</tabTrigger>
+	<scope>source.rust</scope>
+</snippet>
