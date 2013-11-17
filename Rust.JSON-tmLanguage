@@ -29,7 +29,7 @@
         }
     },
     {"name": "keyword.source.rust",
-     "match": "\\b(as|break|claim|const|copy|Copy|do|drop|else|extern|for|if|impl|let|loop|match|mod|mut|Owned|priv|pub|pure|ref|return|unsafe|use|while|mod|Send|static|trait|struct|enum|type)\\b"
+     "match": "\\b(as|break|claim|const|copy|Copy|do|drop|else|extern|for|if|impl|in|let|loop|match|mod|mut|Owned|priv|pub|pure|ref|return|unsafe|use|while|mod|Send|static|trait|struct|enum|type)\\b"
     },
     {"name": "storage.type.source.rust",
      "match": "\\b(Self|m32|m64|m128|f80|f16|f128|int|uint|float|char|bool|u8|u16|u32|u64|f32|f64|i8|i16|i32|i64|str|Option|Either|c_float|c_double|c_void|FILE|fpos_t|DIR|dirent|c_char|c_schar|c_uchar|c_short|c_ushort|c_int|c_uint|c_long|c_ulong|size_t|ptrdiff_t|clock_t|time_t|c_longlong|c_ulonglong|intptr_t|uintptr_t|off_t|dev_t|ino_t|pid_t|mode_t|ssize_t)\\b"
