@@ -64,9 +64,14 @@
 					<key>name</key>
 					<string>entity.name.function.source.rust</string>
 				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.operator.rust</string>
+				</dict>
 			</dict>
 			<key>match</key>
-			<string>\b(fn)\s+([a-zA-Z_][a-zA-Z0-9_]?[\w\:,+ \'&lt;&gt;]*)\s*\(</string>
+			<string>\b(fn)\s+([a-zA-Z_][a-zA-Z0-9_]?[\w\:,+ \'&lt;&gt;]*)\s*(\()</string>
 			<key>name</key>
 			<string>meta.function.source.rust</string>
 		</dict>
@@ -102,9 +107,27 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(\w\(\w\)*!)|(#\[[\w=\(\)_]+\])\b</string>
+			<string>^(\w\(\w\)*!)|(#\[[\w=\(\)_]+\])$</string>
 			<key>name</key>
-			<string>meta.preprocessor.source.rust</string>
+			<string>comment.block.preprocessor.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\{|\}</string>
+			<key>name</key>
+			<string>keyword.operator.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\(|\)</string>
+			<key>name</key>
+			<string>keyword.operator.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\[|\]</string>
+			<key>name</key>
+			<string>keyword.operator.rust</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -153,6 +176,18 @@
 			<string>\*/</string>
 			<key>name</key>
 			<string>comment.block.source.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(=&gt;)|(-&gt;)|[-:=*,!.+|%/&amp;~@&lt;&gt;;]</string>
+			<key>name</key>
+			<string>keyword.operator.rust</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>_</string>
+			<key>name</key>
+			<string>support.function.rust</string>
 		</dict>
 	</array>
 	<key>repository</key>
