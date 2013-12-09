@@ -17,7 +17,7 @@
 	<array>
 		<dict>
 			<key>match</key>
-			<string>'[a-zA-Z_][a-zA-Z0-9_]*[^\']</string>
+			<string>'[a-zA-Z_][a-zA-Z0-9_]*(?=[^\'])</string>
 			<key>name</key>
 			<string>variable.other.source.rust</string>
 		</dict>
